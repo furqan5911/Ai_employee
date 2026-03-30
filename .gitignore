@@ -1,0 +1,99 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Personal AI Employee — Git Ignore
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Secrets (NEVER commit these) ──────────────────────────────────────────────
+.env
+credentials.json
+token.json
+.mcp.json
+*.pem
+*.key
+*.p12
+*.pfx
+whatsapp_session/
+*_session/
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+.env.local
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+
+# ── UV (Python package manager) ───────────────────────────────────────────────
+.uv/
+uv.lock
+
+# ── Node.js (MCP servers) ─────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+dist/
+*.tsbuildinfo
+
+# ── Logs (keep structure but ignore log content) ──────────────────────────────
+AI_Employee_Vault/Logs/*.log
+AI_Employee_Vault/Logs/*.jsonl
+AI_Employee_Vault/Logs/*.txt
+AI_Employee_Vault/Logs/*.pid
+scripts/*.log
+
+# ── Vault folders with sensitive data (DON'T push personal content) ───────────
+AI_Employee_Vault/Needs_Action/
+AI_Employee_Vault/Pending_Approval/
+AI_Employee_Vault/In_Progress/
+AI_Employee_Vault/Approved/
+AI_Employee_Vault/Rejected/
+AI_Employee_Vault/Inbox/
+AI_Employee_Vault/Updates/
+AI_Employee_Vault/Logs/
+
+# ── OS files ──────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── IDE ────────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Playwright ────────────────────────────────────────────────────────────────
+/playwright-report/
+/playwright/.cache/
+test-results/
+
+# ── Temporary files ───────────────────────────────────────────────────────────
+*.tmp
+*.bak
+*.backup
+~$*

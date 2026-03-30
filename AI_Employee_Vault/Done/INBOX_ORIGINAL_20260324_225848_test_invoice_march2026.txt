@@ -1,0 +1,10 @@
+Invoice #1042
+Date: 2026-03-23
+From: Acme Supplies Co.
+To: [Your Business Name]
+
+Item: Cloud hosting services (March 2026)
+Amount: $75.00
+Due: 2026-03-30
+
+Please process payment at your earliest convenience.

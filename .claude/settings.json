@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"/c/Users/uses/Downloads/ai employee/scripts/ralph_wiggum.py\"",
+            "timeout": 30,
+            "statusMessage": "🔄 Ralph Wiggum: checking if task is complete..."
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Read(AI_Employee_Vault/**)",
+      "Write(AI_Employee_Vault/**)",
+      "Bash(python scripts/*)",
+      "Bash(python --version)",
+      "Bash(pip install*)",
+      "Bash(uv pip install*)"
+    ]
+  },
+  "env": {
+    "VAULT_PATH": "./AI_Employee_Vault",
+    "DRY_RUN": "true"
+  }
+}

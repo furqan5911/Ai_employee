@@ -1,0 +1,30 @@
+# Personal AI Employee — Python Dependencies
+# Install with: pip install -r requirements.txt
+# Or with UV:   uv pip install -r requirements.txt
+
+# ─── Core ──────────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0          # Load .env files
+
+# ─── File System Watcher (Bronze Tier) ─────────────────────────────────────────
+watchdog>=4.0.0               # File system monitoring events
+
+# ─── Gmail Watcher (Bronze/Silver Tier) ────────────────────────────────────────
+google-auth>=2.28.0
+google-auth-oauthlib>=1.2.0
+google-auth-httplib2>=0.2.0
+google-api-python-client>=2.120.0
+
+# ─── WhatsApp Watcher (Silver Tier) ────────────────────────────────────────────
+playwright>=1.44.0             # Browser automation (run: playwright install chromium)
+
+# ─── Process Management (All Tiers) ────────────────────────────────────────────
+psutil>=5.9.0                 # Process monitoring in watchdog
+
+# ─── Utilities ─────────────────────────────────────────────────────────────────
+requests>=2.31.0              # HTTP calls for banking APIs etc.
+schedule>=1.2.0               # Simple job scheduling (alternative to cron)
+
+# ─── Development (optional) ────────────────────────────────────────────────────
+# pytest>=8.0.0
+# black>=24.0.0
+# ruff>=0.4.0
