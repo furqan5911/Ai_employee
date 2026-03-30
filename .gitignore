@@ -101,7 +101,6 @@ test-results/
 # ── Local/dev only (not needed in repo) ────────────────────────────────────────
 .claude/
 session_history/
-skills/
 ollama
 *.bat
 *.ps1
