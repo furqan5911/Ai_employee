@@ -102,6 +102,7 @@ test-results/
 .claude/
 session_history/
 skills/
+ollama
 *.bat
 *.ps1
 SECURITY.md
