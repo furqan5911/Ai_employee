@@ -1,4 +1,4 @@
-# CLAUDE.md — Personal AI Employee (Bronze Tier)
+# CLAUDE.md — Personal AI Employee (Silver Tier)
 
 > This file is your AI Employee's "brain stem." Claude Code reads this on every session start.
 > Keep it updated. It defines who you are, what the agent can do, and how it should behave.
@@ -105,14 +105,27 @@ Every session, follow this loop:
 
 All AI functionality is implemented as Agent Skills. Use these skills:
 
+### Core Processing Skills
 - **process-inbox**: Scan `/Needs_Action/`, categorize and prioritize items
-- **create-plan**: Generate a `Plan.md` for a multi-step task
-- **request-approval**: Write an approval file to `/Pending_Approval/`
-- **execute-approved**: Process files in `/Approved/` and take action via MCP
+- **process-email**: Handle email action items (categorize, draft responses, create approvals)
+- **exec-plan**: Execute plans from `/Plans/` using Ralph Wiggum persistence pattern
+- **create-plan**: Generate a `Plan.md` for a multi-step task (3+ steps)
+
+### Approval & Workflow
+- **request-approval**: Write an approval file to `/Pending_Approval/` for sensitive actions
 - **update-dashboard**: Refresh `Dashboard.md` with current status
-- **generate-briefing**: Create a CEO briefing from business data
 - **audit-log**: Append an entry to today's log file
 - **file-watcher**: Monitor `/Inbox/` for new dropped files
+
+### Project Management
+- **generate-briefing**: Create a CEO briefing from business data (weekly Monday morning)
+- **tier-upgrade**: Track progress toward next hackathon tier (Bronze→Silver→Gold→Platinum)
+- **vault-cleanup**: Prepare vault for safe GitHub push (remove/redact sensitive data)
+
+### Session Management (Personal Utilities)
+- **ai-status**: Quick status overview of AI Employee system
+- **start-session**: Load previous session context on startup
+- **end-session**: Create session history and prepare for next session
 
 ---
 
@@ -166,8 +179,8 @@ After every significant action, update `Dashboard.md`:
 | Server | Capability | Status |
 |--------|-----------|--------|
 | filesystem | Read/write vault files | ✅ Active (built-in) |
-| email-mcp | Send/draft Gmail | 🔧 Configure credentials |
-| browser-mcp | Web automation | 🔧 Install @anthropic/browser-mcp |
+| email-mcp | Send/draft Gmail | ✅ Configured |
+| browser-mcp | Web automation | 🔧 Optional: Install @anthropic/browser-mcp |
 
 ---
 
@@ -196,10 +209,11 @@ Run this before ending every session:
 | Tier | Status | Key Remaining Work |
 |------|--------|--------------------|
 | 🥉 Bronze | ✅ **COMPLETE** | — |
-| 🥈 Silver | 🔵 Not Started | Gmail watcher + Email MCP + LinkedIn + HITL flow + cron |
-| 🥇 Gold | 🔵 Not Started | Odoo + Facebook/Instagram/Twitter + full CEO briefing |
-| 💎 Platinum | 🔵 Not Started | Cloud VM + always-on + Cloud/Local sync |
+| 🥈 Silver | ✅ **COMPLETE** | — |
+| 🥇 Gold | 🟡 Ready to Start | WhatsApp watcher + LinkedIn auto-post + Ralph Wiggum + full CEO briefing |
+| 💎 Platinum | 🔴 Not Started | Cloud VM + always-on + Cloud/Local sync |
 
 ---
 
-*Last updated: 2026-03-21 | Version: 1.1.0 | Tier: Bronze ✅ → Silver next*
+*Last updated: 2026-03-31 | Version: 2.0.0 | Tier: Silver ✅ → Gold next*
+*All 14 Agent Skills validated and ready for production use*
