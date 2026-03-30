@@ -5,24 +5,19 @@
 
 ---
 
-## 📖 Session Startup — Load Previous Context FIRST
+## 📖 Session Management
 
-**Every session, before doing anything else, run this sequence:**
+The `session_history/` directory is your long-term memory across Claude Code sessions. It maintains continuity by tracking what was done, what's pending, and what to do next.
 
-1. **Check `session_history/` directory** — if it exists and contains `.md` files:
-   - Read the **most recent file** (highest date in filename, e.g. `2026-03-21_session_001.md`)
-   - This tells you: what was done before, what's pending, what tier we're on
-   - Briefly summarize to the user: "Last session on [date]: [what was done]. Next up: [next steps]."
+### Session Start
+Use the **`start-session`** skill or manually:
+- Read the most recent session file from `session_history/`
+- Summarize: "Last session on [date]: [what was done]. Next up: [next steps]."
 
-2. **If `session_history/` is empty or doesn't exist** — this is a fresh start. Proceed normally.
-
-3. **At the END of every session**, create a new file in `session_history/`:
-   - Filename: `YYYY-MM-DD_session_NNN.md` (increment NNN from last session)
-   - Content: what was done this session, what's pending, what the next session should start with
-   - This ensures continuity across all future sessions.
-
-> The `session_history/` directory is your long-term memory across Claude Code sessions.
-> Never skip reading it at startup — it's how you maintain continuity as a true AI Employee.
+### Session End
+Use the **`end-session`** skill or manually:
+- Create `session_history/YYYY-MM-DD_session_NNN.md` with what was done and what's pending
+- Update `Dashboard.md` with final status
 
 ---
 
@@ -184,23 +179,19 @@ After every significant action, update `Dashboard.md`:
 
 ---
 
-## 📝 Session Startup Checklist
+## 📝 Session Checklist
 
-Run this EVERY time Claude Code starts (in order):
-- [ ] **1. Read `session_history/`** — find the newest `.md` file, read it, summarize to user
-- [ ] **2. Read this file** (CLAUDE.md) — you're doing this now ✓
-- [ ] **3. Read `Dashboard.md`** — understand current state
-- [ ] **4. Check `Needs_Action/`** for new items
-- [ ] **5. Check `Approved/`** for pending executions
-- [ ] **6. Update `Dashboard.md`** with session start time
+### Startup (Use `start-session` skill)
+- [ ] Read latest session history
+- [ ] Read `Dashboard.md` for current state
+- [ ] Check `Needs_Action/` for pending items
+- [ ] Check `Approved/` for ready-to-execute actions
 
-## 📝 Session END Checklist
-
-Run this before ending every session:
-- [ ] Create new file in `session_history/YYYY-MM-DD_session_NNN.md`
-- [ ] Document: what was done, what's pending, what to do next session
+### End (Use `end-session` skill)
+- [ ] Create session history file
+- [ ] Document what was done and what's pending
 - [ ] Update `Dashboard.md` with final status
-- [ ] Make sure all in-progress tasks are documented in `Plans/`
+- [ ] Ensure in-progress tasks are saved to `Plans/`
 
 ---
 
