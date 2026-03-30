@@ -1,3 +1,8 @@
+---
+name: exec-plan
+description: Execute a plan from /Plans/ using Ralph Wiggum persistence. Use this skill whenever a plan file exists and needs execution, the user says "execute plan", "continue plan", "work on plan", or after approval is granted. This works through plan checkpoints until all steps are complete.
+---
+
 # exec-plan
 
 Execute a plan from /Plans/ - implements the Ralph Wiggum persistence pattern for multi-step tasks.
@@ -84,7 +89,7 @@ priority: high
 ## Steps
 - [x] Step 1: Completed
 - [ ] Step 2: Current step
-- [ ] Step 3: Next step ⚠️ REQUIRES APPROVAL
+- [ ] Step 3: Next step [!] REQUIRES APPROVAL
 - [ ] Step 4: Final step
 
 ## Completion Criteria

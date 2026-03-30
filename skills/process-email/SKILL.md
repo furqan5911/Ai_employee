@@ -1,3 +1,8 @@
+---
+name: process-email
+description: Process email action items from /Needs_Action/. Use this skill whenever an EMAIL_ file exists in Needs_Action, or the user says "process email", "handle email", "reply to email". This skill categorizes emails (invoice, support, inquiry, urgent), drafts context-aware responses, and creates approval requests for unknown contacts or sensitive messages.
+---
+
 # process-email
 
 Process an email action item from /Needs_Action/ - categorize, draft response, and handle approvals.

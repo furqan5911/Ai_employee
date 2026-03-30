@@ -1,3 +1,8 @@
+---
+name: process-inbox
+description: Process all items in /Needs_Action/ folder. Use this skill whenever the user says "process", "handle pending", "process inbox", "what needs action", or when items exist in Needs_Action that require processing. This skill prioritizes items by urgency, routes emails to process-email, creates plans for complex tasks, and generates approval requests for sensitive actions.
+---
+
 # process-inbox
 
 Process all items in /Needs_Action/ - prioritize, handle, or create plans for each.

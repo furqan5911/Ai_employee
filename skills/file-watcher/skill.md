@@ -1,3 +1,8 @@
+---
+name: file-watcher
+description: Monitor /Inbox/ folder for new dropped files. Use this skill when the user says "watch inbox", "monitor files", or when files are dropped into the /Inbox/ folder for processing. This detects new files and creates action items in /Needs_Action/.
+---
+
 # file-watcher
 
 Monitor the /Inbox/ folder for newly dropped files and create action items.

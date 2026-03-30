@@ -1,3 +1,8 @@
+---
+name: tier-upgrade
+description: Track progress toward next hackathon tier (Bronze→Silver→Gold→Platinum). Use this skill when the user asks "what's next", "upgrade tier", "tier status", "gold tier", "platinum tier", "what do I need for [tier] tier", or wants to move to the next tier. Shows requirements and implementation steps.
+---
+
 # tier-upgrade
 
 Track progress toward next hackathon tier and provide specific implementation steps.
