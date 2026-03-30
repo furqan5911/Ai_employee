@@ -97,3 +97,11 @@ test-results/
 *.bak
 *.backup
 ~$*
+
+# ── Local/dev only (not needed in repo) ────────────────────────────────────────
+.claude/
+session_history/
+skills/
+*.bat
+*.ps1
+SECURITY.md
